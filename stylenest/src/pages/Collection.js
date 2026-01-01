@@ -1,64 +1,64 @@
-// import React from "react";
+// // import React from "react";
 
-// function Collection() {
-//   return (
-//     <section className="products">
-//       <h2>Our Collection</h2>
+// // function Collection() {
+// //   return (
+// //     <section className="products">
+// //       <h2>Our Collection</h2>
 
-//       <div className="product-grid">
-//         <div className="card">
-//           <img className="product-image" src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Tshirt" />
-//           <h3>Classic T-Shirt</h3>
-//           <p>₹499</p>
-//         </div>
+// //       <div className="product-grid">
+// //         <div className="card">
+// //           <img className="product-image" src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Tshirt" />
+// //           <h3>Classic T-Shirt</h3>
+// //           <p>₹499</p>
+// //         </div>
 
-//         <div className="card">
-//           <img className="product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Dress" />
-//           <h3>Summer Dress</h3>
-//           <p>₹1299</p>
-//         </div>
+// //         <div className="card">
+// //           <img className="product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Dress" />
+// //           <h3>Summer Dress</h3>
+// //           <p>₹1299</p>
+// //         </div>
 
-//         <div className="card">
-//           <img className="product-image"src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Jacket" />
-//           <h3>Denim Jacket</h3>
-//           <p>₹1899</p>
-//         </div>
+// //         <div className="card">
+// //           <img className="product-image"src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Jacket" />
+// //           <h3>Denim Jacket</h3>
+// //           <p>₹1899</p>
+// //         </div>
 
-//         <div className="card">
-//           <img className="product-image" src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Tshirt" />
-//           <h3>Classic T-Shirt</h3>
-//           <p>₹499</p>
-//         </div>
+// //         <div className="card">
+// //           <img className="product-image" src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Tshirt" />
+// //           <h3>Classic T-Shirt</h3>
+// //           <p>₹499</p>
+// //         </div>
 
-//         <div className="card">
-//           <img className="product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Dress" />
-//           <h3>Summer Dress</h3>
-//           <p>₹1299</p>
-//         </div>
+// //         <div className="card">
+// //           <img className="product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Dress" />
+// //           <h3>Summer Dress</h3>
+// //           <p>₹1299</p>
+// //         </div>
 
-//         <div className="card">
-//           <img className="product-image"src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Jacket" />
-//           <h3>Denim Jacket</h3>
-//           <p>₹1899</p>
-//         </div>
+// //         <div className="card">
+// //           <img className="product-image"src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Jacket" />
+// //           <h3>Denim Jacket</h3>
+// //           <p>₹1899</p>
+// //         </div>
 
-//         <div className="card">
-//           <img className="product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Dress" />
-//           <h3>Summer Dress</h3>
-//           <p>₹1299</p>
-//         </div>
+// //         <div className="card">
+// //           <img className="product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Dress" />
+// //           <h3>Summer Dress</h3>
+// //           <p>₹1299</p>
+// //         </div>
 
-//         <div className="card">
-//           <img className="product-image"src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Jacket" />
-//           <h3>Denim Jacket</h3>
-//           <p>₹1899</p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
+// //         <div className="card">
+// //           <img className="product-image"src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Jacket" />
+// //           <h3>Denim Jacket</h3>
+// //           <p>₹1899</p>
+// //         </div>
+// //       </div>
+// //     </section>
+// //   );
+// // }
 
-// export default Collection;
+// // export default Collection;
 
 import React from "react";
 
@@ -201,4 +201,40 @@ function Collection() {
   );
 }
 
+// export default Collection;
+// import React, { useEffect, useState } from "react";
+
+// function Collection() {
+//   const [products, setProducts] = useState([]);
+
+//  useEffect(() => {
+//   fetch("http://localhost:5000/api/products")
+//     .then((res) => res.json())
+//     .then((data) => setProducts(data))
+//     .catch((err) => console.error(err));
+// }, []);
+
+
+//   return (
+//     <section className="products">
+//       <h2>Our Collection</h2>
+
+//       <div className="product-grid">
+//         {products.map((product) => (
+//           <div className="card" key={product._id}>
+//             <img
+//               className="product-image"
+//               src={product.image}
+//               alt={product.name}
+//             />
+//             <h3>{product.name}</h3>
+//             <p>{product.price}</p>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+
 export default Collection;
+
